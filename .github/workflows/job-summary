@@ -1,1 +1,16 @@
 
+on:
+  workflow_dispatch:
+  
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    
+    - name: testing job summary
+      runs: |
+        echo "| hello world |" >> $GITHUB_STEP_SUMMARY
+        echo "| -------- |" >> $GITHUB_STEP_SUMMARY
+        echo "| TESTING STUFF |" >> $GITHUB_STEP_SUMMARY
+        
+    - name: echo job summary
+      runs: echo {{ github.step.summary }}
