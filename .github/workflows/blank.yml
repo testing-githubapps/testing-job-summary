@@ -41,5 +41,5 @@ jobs:
     if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
     steps:
       - run: |
-          does this work?
+          echo does this work?
   
